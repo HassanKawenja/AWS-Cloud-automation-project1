@@ -23,5 +23,5 @@ jobs:
       - name: Zip and Push to AWS
         run: |
           zip lambda.zip lambda_function.py
-          aws s3 cp lambda.zip s3://your-unique-bucket-name/lambda.zip
-          aws cloudformation deploy --template-file template.yaml --stack-name my-cloud-stack --parameter-overrides DeploymentBucketName=your-unique-bucket-name
+          aws s3 cp lambda.zip s3://hassan-aws-cloud-automation-project1/lambda.zip
+          aws cloudformation deploy --template-file template.yaml --stack-name my-cloud-stack --parameter-overrides DeploymentBucketName=hassan-aws-cloud-automation-project1
