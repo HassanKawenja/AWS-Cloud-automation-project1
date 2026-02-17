@@ -19,6 +19,9 @@ jobs:
         with:
           role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
           aws-region: us-east-1
+# ADD THIS STEP BELOW
+      - name: Check Handshake Connection
+        run: aws sts get-caller-identity
 
       - name: Zip and Push to AWS
         run: |
